@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jovian Drift SOS</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+    </head>
+    <body>
+        <iframe id="bg-frame" src="../styles/effect.html"></iframe>
+        
+        <form method="post" action="#">
+
+            <!--Phase 2: Pilot Credentials (Fieldset 1)-->
+            <fieldset>
+                <legend>Pilot Credentials</legend>
+
+                <label for="pilot-name">Pilot Name:</label>
+                <input type="text" id="pilot-name" name="pilot-name" placeholder="Enter name" required>
+
+                <label for="identifier1">Access Code:</label>
+                <input type="password" id="identifier1" name="access_code" required>
+
+                <label for="identifier2">Command Email:</label>
+                <input type="email" id="identifier2" name="email" required>
+            </fieldset>
+
+            <!--Phase 3:  Hull Damage-->
+            <fieldset>
+                <legend>Vessel Diagnostics</legend>
+
+                <label for="identifier3">Hull Damage (%):</label>
+                <input type="number" id="identifier3" name="hull_damage" required>
+
+                <label for="identifier4">Emergency Level:</label>
+                <select id="identifier4" name="EmergencyLevel" required>
+                    <option value="">-- Select emergency level --</option>
+                    <option value="low">low</option>
+                    <option value="medium">medium</option>
+                    <option value="high">high</option>
+                </select>
+            </fieldset>
+
+            <!--Phase 4: Mission Log & Evidence (Fieldset 3)-->
+            <fieldset>
+                <legend>Mission Log & Evidence</legend>
+
+                <label for="identifier5">SOS Message:</label>
+                <textarea id="identifier5" name="SOS_Message" rows="3" required></textarea>
+
+                <div>
+                    <input type="checkbox" id="quarantine" name="Quarantine_Agreement" required>
+                    <label for="quarantine">I agree to quarantine protocols.</label>
+                </div>
+            </fieldset>
+
+            <!--Phase 5: The Control Panel (Buttons)-->
+            <button type="submit">INITIATE TRANSMISSION</button>
+            <button type="reset">RESET SYSTEM</button>
+        </form>
+
+        <script src="../scripts/launch.js"></script>
+    </body>
+</html>
